@@ -18,3 +18,6 @@ Example: `PORT=9000 scripts/run.sh`
 Prints `TESTS: n/n` and exits 0 on success. Requires JDK 11+.
 
 Built with the JDK built-in HttpServer.
+
+## What it does
+This service is a small HTTP API that returns a random quote. It does not need a database or any external service.
