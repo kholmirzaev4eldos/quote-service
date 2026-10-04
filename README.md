@@ -16,3 +16,5 @@ Example: `PORT=9000 scripts/run.sh`
 ## Test
     scripts/test.sh
 Prints `TESTS: n/n` and exits 0 on success. Requires JDK 11+.
+
+Built with the JDK built-in HttpServer.
