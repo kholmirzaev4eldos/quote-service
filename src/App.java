@@ -7,6 +7,18 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class App {
+
+    public static String greeting() {
+    	String g = System.getenv("GREETING");
+    	return (g == null || g.isEmpty()) ? "Welcome" : g;
+	}
+
+
+
+
+
+
+
     public static final List<String> QUOTES = List.of(
         "The only way to do great work is to love what you do.",
         "Stay hungry, stay foolish.",
@@ -25,7 +37,7 @@ public class App {
         server.createContext("/quote", ex -> send(ex, 200, randomQuote()));
         server.createContext("/", ex -> {
             if (ex.getRequestURI().getPath().equals("/")) {
-                send(ex, 200, "Welcome to Random Quote API!");
+                send(ex, 200,greeting() + " to Random Quote API!");
             } else {
                 send(ex, 404, "not found");
             }
