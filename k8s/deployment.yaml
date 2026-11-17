@@ -18,7 +18,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: app
-          image: ghcr.io/kholmirzaev4eldos/quote-service:3e5f28b6c6592ac63c17e661551e90e803f00177
+          image: ghcr.io/kholmirzaev4eldos/quote-service:b88d7477cda859136cb89c3322affd41db01b3c3
           ports:
             - name: http
               containerPort: 8080
